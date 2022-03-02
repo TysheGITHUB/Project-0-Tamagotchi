@@ -1,27 +1,35 @@
-// const myHeader = document.getElementById('myheader');
-// // console.log(myHeader);
+let count = 0;
 
-// const myButton = document.getElementById('my-button');
-// //console.log(myButton);
-// const addOne = () => {
-//     // litterary adding plus(+1) 
-//     //console.log(“addOne function invoke”)
-    
-//     num++
-//     myCount.innerText= num; // this invoke the method 
-//     console.log(num);
-//     };
+// setInterval(function(){
+//     count++;
+//     console.log(count);
+// }, 1000)
 
-// myButton.addEventListener("click", addOne)
+let intervalFunc = setInterval(function(){
+    count++;
+    console.log(count);
+}, 1000);
 
-// const myCount = document.getElementById ('my-count');
-// // console.log(myCount);
+// clearInterval(intervalFunc);
 
-// let num = 0; //<-- any number of your choice 
+const jumpEl = document.getElementById("btn-jump");
+const sitEl = document.getElementById("btn-sit");
+const runEl = document.getElementById("btn-run");
 
-// console.log(myCount.innerText);
+function handleJumpClick() {
+     console.log("Jump,Clicked");
+     package.innerText
+}
+function handleSitClick(){
+    console.log("Sit Button Ready")
+}
 
-// // EVENT LISTENER //
+function handleRunClick(){
+    console.log("RUN,clicked")
+}
+
+startEl.addEventListener('click', callbackFunction)
+.addEventListener('click', callbackFunction)
+.addEventListener('click', callbackFunction)
 
 
-// myButton.addEventListener('click' , addOne);
