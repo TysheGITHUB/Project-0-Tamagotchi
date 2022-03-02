@@ -1,35 +1,36 @@
-let count = 0;
 
-// setInterval(function(){
-//     count++;
-//     console.log(count);
-// }, 1000)
 
-let intervalFunc = setInterval(function(){
-    count++;
-    console.log(count);
-}, 1000);
-
-// clearInterval(intervalFunc);
-
+// identify the elements in the DOM with variables in our JS
+const startEl = document.getElementById("btn-start");
 const jumpEl = document.getElementById("btn-jump");
-const sitEl = document.getElementById("btn-sit");
-const runEl = document.getElementById("btn-run");
+const stopEl = document.getElementById("btn-stop");
+const countEl = document.getElementById("count");
+
+let count = 0;
+let myCounter = null;
+// console.log(typeof(myCounter));
+  
+function handleStartClick() {
+  // console.log("start button clicked!");
+  myCounter = setInterval(function(){
+    count++;
+    countEl.innerText = "Count: " + count;
+  }, 1000);
+};
 
 function handleJumpClick() {
-     console.log("Jump,Clicked");
-     package.innerText
-}
-function handleSitClick(){
-    console.log("Sit Button Ready")
-}
+  // console.log("pause button clicked!");
+  clearInterval(myCounter);
+};
 
-function handleRunClick(){
-    console.log("RUN,clicked")
-}
+function handleStopClick() {
+  // console.log("stop button clicked!");
+  clearInterval(myCounter);
+  count = 0;
+  // console.log(count);
+  countEl.innerText = "Count: " + count;
+};
 
-startEl.addEventListener('click', callbackFunction)
-.addEventListener('click', callbackFunction)
-.addEventListener('click', callbackFunction)
-
-
+startEl.addEventListener('click', handleStartClick);
+pauseEl.addEventListener('click', handleJumpClick);
+stopEl.addEventListener('click', handleStopClick);
