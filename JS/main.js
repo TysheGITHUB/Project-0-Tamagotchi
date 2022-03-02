@@ -14,8 +14,8 @@ let myCounter = null;
 function handleStartClick() {
   // console.log("start button clicked!");
   myCounter = setInterval(function(){
-    count++;
-    countEl.innerText = "Count: " + count;
+    count ++ ;
+    countEl.innerText = "Count: " + count ;
   }, 1000);
 };
 
@@ -37,6 +37,10 @@ function resetCounter(){
     counter.innerHTML = i; 
 }
 
+const stopTimer = () => {
+    clearInterval(setSeconds(0))
+    document.querySelector('#counter').remove()
+}
 
 
 startEl.addEventListener('click', handleStartClick);
