@@ -2,8 +2,9 @@
 
 // identify the elements in the DOM with variables in our JS
 const startEl = document.getElementById("btn-start");
-const jumpEl = document.getElementById("btn-jump");
-const stopEl = document.getElementById("btn-stop");
+const pauseEl = document.getElementById("btn-pause");
+const stopEl = document.getElementById("btn-stop-count");
+const resetBtn = document.querySelector("#resetBtn"); 
 const countEl = document.getElementById("count");
 
 let count = 0;
@@ -18,7 +19,7 @@ function handleStartClick() {
   }, 1000);
 };
 
-function handleJumpClick() {
+function handlePauseClick() {
   // console.log("pause button clicked!");
   clearInterval(myCounter);
 };
@@ -30,7 +31,15 @@ function handleStopClick() {
   // console.log(count);
   countEl.innerText = "Count: " + count;
 };
+function resetCounter(){ 
+    clearInterval(interval); 
+    i = 0; 
+    counter.innerHTML = i; 
+}
+
+
 
 startEl.addEventListener('click', handleStartClick);
-pauseEl.addEventListener('click', handleJumpClick);
+pauseEl.addEventListener('click', handlePauseClick);
 stopEl.addEventListener('click', handleStopClick);
+resetBtn.addEventListener("click", resetCounter); 
