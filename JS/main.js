@@ -8,6 +8,8 @@ const resetBtn = document.querySelector("#resetBtn");
 const countEl = document.getElementById("count");
 
 let count = 0;
+let stopp = ""
+let pause = false;
 let myCounter = null;
 // console.log(typeof(myCounter));
   
@@ -22,6 +24,8 @@ function handleStartClick() {
 function handlePauseClick() {
   // console.log("pause button clicked!");
   clearInterval(myCounter);
+ 
+  
 };
 
 function handleStopClick() {
@@ -29,7 +33,7 @@ function handleStopClick() {
   clearInterval(myCounter);
   count = 0;
   // console.log(count);
-  countEl.innerText = "Count: " + count;
+  countEl.innerText = "Count: " + stopp;
 };
 function resetCounter(){ 
     clearInterval(interval); 
@@ -41,6 +45,8 @@ const stopTimer = () => {
     clearInterval(setSeconds(0))
     document.querySelector('#counter').remove()
 }
+
+
 
 
 startEl.addEventListener('click', handleStartClick);
