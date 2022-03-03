@@ -19,4 +19,6 @@ body {
     background-repeat: repeat;
     background-size: 110%;
 
+} div {
+    padding: 0.5em 2em; 
 }
