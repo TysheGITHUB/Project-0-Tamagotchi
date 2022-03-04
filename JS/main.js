@@ -1,42 +1,43 @@
-
-
 // identify the elements in the DOM with variables in our JS
-const eatEl = document.getElementById("btn-eat");
-const pauseEl = document.getElementById("btn-pause");
-const stopEl = document.getElementById("btn-stop-count");
-const resetBtn = document.querySelector("#resetBtn"); 
+const hungryBtn = document.querySelector("btn-Hungry");
+const soicalizeBtn = document.querySelector("btn-Soicalize");
+const sleepBtn = document.querySelector("btn-sleep");
+const bathroomBtn = document.querySelector("btn-bathroom")
+const restBtn = document.querySelector("btn-rest"); 
 const countEl = document.getElementById("count");
 
 
-let count = 0;
-let stopp = ""
-let pause = false;
-let myCounter = null;
-
-const addOne = document.querySelector('#add')
-// console.log(typeof(myCounter));
+let Hungry = 100;
+let Socialize = 100
+let Sleep = 100;
+let Bathroom = 100;
   
-function handleEatClick() {
-  // console.log("food button clicked!");
-  myCounter = setInterval(function(){
+function hungryClick() {
+  // console.log("hungry button clicked!");
+  myTimer = setInterval(Loop, 1000){
     count ++ ;
     countEl.innerText = "Count: " + count ;
   }, 1000);
 };
 
-function handlePauseClick() {
+function handleSoicalizeClick() {
   // console.log("pause button clicked!");
   clearInterval(myCounter);
- 
 };
-
-function handleStopClick() {
+function handleSleepClick() {
   // console.log("stop button clicked!");
   clearInterval(myCounter);
   count = 0;
   // console.log(count);
   countEl.innerText = "Count: " + stopp;
 };
+function bathroomClick() {
+    // console.log("stop button clicked!");
+    clearInterval(myCounter);
+    count = 0;
+    // console.log(count);
+    countEl.innerText = "Count: " + stopp;
+}
 function resetCounter(){ 
     clearInterval(interval); 
     i = 0; 
@@ -51,8 +52,20 @@ const stopTimer = () => {
 
 
 
-eatEl.addEventListener('click', handleeatClick);
-pauseEl.addEventListener('click', handlePauseClick);
-stopEl.addEventListener('click', handleStopClick);
-resetBtn.addEventListener("click", resetCounter); 
+hungryBtn.addEventListener('click', () =>{
+InputEvent.vaule = paraseInt(input.vaule) > 100;
+});
+
+socializeBtn.addEventListener('click', () =>{
+InputEvent.vaule = paraseInt(input.vaule) > 100;
+}
+sleepBtn.addEventListener('click', () => {
+InputEvent.vaule = paraseInt(input.vaule) > 100;
+}
+bathroomBtn.addEventListener('click', () => {
+InputEvent.vaule = paraseInt(input.vaule) > 100;
+});
+
+
+restBtn.addEventListener("click", resetCounter); 
 
