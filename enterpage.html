@@ -7,15 +7,36 @@
     <script src = "JS/main.js" defer></script>
     <link rel ="stylesheet" href="css/style.css">
     <title>Document</title>
+    <style> 
+    #btn-start {
+        color: orangered;
+    } #btn-pause {
+        color:blue;
+    } #btn-stop-count {
+        color: green;
+    } 
+    </style>
 </head>
+
 <body>
-    
 
 <h1>Life With Memetchi Tamagotchi</h1>
-    <p id="count">Count: 0</p>
-    <button id="btn-start">Start</button>
-    <button id="btn-pause">Pause</button>
-    <button id="btn-stop-count">Restart</button>
-  
+<div id = "">
+    <div id="">
+        <img src="tumblr_paceojaGj21uon9hao1_500.gifv.gif" class"pet" id="pet" alt="meme"
+    </div>
+    <div class="side"></div>
+    Hungry:<div id="hungry" class"bar">100%</div>
+    Soicalize:<div id="Socialize" class="bar">100%</div>
+    Sleep:<div id="Sleep" class="bar">100%</div>
+    Bathroom:<div id="bathroom" class="bathroom">100%</div>
+
+    <p><span class="meme" onClick="Hungry()"></span></p>
+    <p><span class="meme" onClick="Socialize()"></span></p>
+    <p><span class="meme" onClick="Sleep()"></span></p>
+    <p><span class="meme" onClick="Bathroom()"></span></p>
+</div>
+<script src ="main.js"></script>
+
 </body>
 </html>

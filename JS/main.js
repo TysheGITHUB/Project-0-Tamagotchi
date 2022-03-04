@@ -1,20 +1,23 @@
 
 
 // identify the elements in the DOM with variables in our JS
-const startEl = document.getElementById("btn-start");
+const eatEl = document.getElementById("btn-eat");
 const pauseEl = document.getElementById("btn-pause");
 const stopEl = document.getElementById("btn-stop-count");
 const resetBtn = document.querySelector("#resetBtn"); 
 const countEl = document.getElementById("count");
 
+
 let count = 0;
 let stopp = ""
 let pause = false;
 let myCounter = null;
+
+const addOne = document.querySelector('#add')
 // console.log(typeof(myCounter));
   
-function handleStartClick() {
-  // console.log("start button clicked!");
+function handleEatClick() {
+  // console.log("food button clicked!");
   myCounter = setInterval(function(){
     count ++ ;
     countEl.innerText = "Count: " + count ;
@@ -25,7 +28,6 @@ function handlePauseClick() {
   // console.log("pause button clicked!");
   clearInterval(myCounter);
  
-  
 };
 
 function handleStopClick() {
@@ -49,7 +51,8 @@ const stopTimer = () => {
 
 
 
-startEl.addEventListener('click', handleStartClick);
+eatEl.addEventListener('click', handleeatClick);
 pauseEl.addEventListener('click', handlePauseClick);
 stopEl.addEventListener('click', handleStopClick);
 resetBtn.addEventListener("click", resetCounter); 
+

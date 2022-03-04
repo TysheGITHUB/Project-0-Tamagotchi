@@ -1,13 +1,14 @@
 h1 {
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Times New Roman', Times, serif ;
     font-size: 40px;
+    color: rgb(201, 190, 177);
 }
-h2{
-    font-family: 'Times New Roman', Times, serif;
+/* h2{
+    /* font-family: 'Times New Roman', Times, serif;
     font-size: 45px;
-    text-align: center;
-}
+    text-align: center; */ */
+
 body {
    text-align: center;
    margin: 400px; 
@@ -15,10 +16,40 @@ body {
 } body {
     text-align: center;
     margin: 250px; 
-    background-image:url(https://cutewallpaper.org/21/8-bit-gif-background/8-Bit-Day-Gif-Hd-Wallpapers-backgrounds-Download-.gif) ; 
+    background-image:url(https://64.media.tumblr.com/9c290079f03561e9e6d1f27a9e1adb94/tumblr_or6nwehp7T1wq3wtao1_400.gifv) ; 
     background-repeat: repeat;
-    background-size: 110%;
-
+    background-size: 1000%;
 } div {
-    padding: 0.5em 2em; 
+    text-align: center;
+
+} #container {
+    width: 1000px;
+    height: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  btn-1{
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.pet{
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+    }
+
+    .meme{
+        padding: 5px 70px
+        color black;
+        border-radius: 9px; 
+        width: 100px;
+    }; 
+
+
+.bar{
+    width: 100px;
+    background : #81b8dd;
+
 }
