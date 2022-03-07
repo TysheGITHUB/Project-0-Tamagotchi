@@ -14,7 +14,7 @@ function hungryClick() {
   // console.log("hungry button clicked!"); // count to ten ..less than or equal to 10
 if (count > 1) {
     count--
-    hungryEl.innerText= ("Hungry:" + count);
+    hungryEl.innerText= ("Hungry" + count);
 }  
 }
 function soicalizeClick() {
@@ -23,10 +23,10 @@ function soicalizeClick() {
     socializeEl.innerText = "Socialize " + count;
     }
     // decrease the counter by 1 everytime the user clicks on the button
- btn.onclick = function()
- {
-    counter.innerHTML;
- };
+//  btn.onclick = function()
+//  {
+//     counter.innerHTML;
+//  };
   // console.log("soicalize button clicked!"); // count to ten .. greater than or equal to 10
   clearInterval(myCounter);
 };
