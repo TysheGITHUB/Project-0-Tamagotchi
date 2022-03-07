@@ -12,12 +12,13 @@ const bathroomEl = document.getElementById("count-bathroom")
 
 function hungryClick() {
   // console.log("hungry button clicked!"); // count to ten ..less than or equal to 10
-if (count <=9) {
+if (count > 1) {
     count--
+    hungryEl.innerText= ("Hungry:" + count);
 }  
 }
 function soicalizeClick() {
-    if (count >=9){
+    if (count > 1){
         count--
     socializeEl.innerText = "Socialize " + count;
     }
@@ -30,7 +31,7 @@ function soicalizeClick() {
   clearInterval(myCounter);
 };
 function sleepClick() {
-    if(count >=9) {
+    if(count > 1) {
         count--
         sleepEl.innerText = "Sleep " + count;
     }
@@ -42,7 +43,7 @@ function bathroomClick() {
     clearInterval(myCounter);
     count = 0;
     // console.log(count);
-    countEl.innerText = `bathroom: " ${stopp}`;
+    countEl.innerText = "bathroom " + count ;
 }
 function resetCounter(){ 
     clearInterval(interval); 
@@ -51,7 +52,7 @@ function resetCounter(){
 }
 
 function stopClicks(){
-    if(count >= 9) {
+    if(count >= 10) {
         clearInterval(myClicks)
     }
 }
