@@ -14,10 +14,10 @@ class Pet {
         this.bathroom = bathroom;
     }
 };
-// let Hungry = 100;
-// let Socialize = 100
-// let Sleep = 100;
-// let Bathroom = 100;
+let Hungry = 10;
+let Socialize = 6;
+let Sleep = 1;
+let Bathroom = 5;
 
 petHungry = function () {
     if ( startHungry % 10 === 0){
@@ -30,7 +30,7 @@ decreseHungry = function () {
         return this.hungry -= 1;
     }
 }
-trackSocialize = function () {
+petSocialize = function () {
     if ( startSocialize % 6 === 0) {
         this.socialize++;
     
@@ -42,7 +42,33 @@ decreaseSoicailize = function() {
         return this.bored -= 1;
     }
 }
+petSleep = function () {
+    if(this.sleep > 1){
+        this.sleep--;
+    }
+        
+ }
 
+ decreaseSleep = function () {
+     if(cound >1) {
+         count--
+         decreaseSleep.innerText- ("this.sleep" + count)
+
+     }
+ }
+
+petBathroom = function () {
+    if(this.bathroom > 5) {
+        return this.bathroom -= 1;
+    }
+}
+
+bathroomCount = function () {
+    if(this.bathroom > 5) {
+        return this.bathroom -= 1;
+    }
+
+}
 
 // function hungryClick() {
 //   // console.log("hungry button clicked!");
@@ -81,7 +107,37 @@ decreaseSoicailize = function() {
 //     document.querySelector('#counter').remove()
 // }
 
+const startEl = document.getElementById("btn-start");
+const pauseEl = document.getElementById("btn-pause");
+const stopEl = document.getElementById("btn-stop-count");
+const resetBtn = document.querySelector("#resetBtn"); 
+const countEl = document.getElementById("count");
 
+let count = 0;
+let myCounter = null;
+// console.log(typeof(myCounter));
+  
+function handleStartClick() {
+  // console.log("start button clicked!");
+  myCounter = setInterval(function(){
+    count++;
+    countEl.innerText = "Count: " + count;
+    count ++ ;
+    countEl.innerText = "Count: " + count ;
+  }, 1000);
+};
+
+
+const stopTimer = () => {
+    clearInterval(setSeconds(0))
+    document.querySelector('#counter').remove()
+}
+
+
+startEl.addEventListener('click', handleStartClick);
+pauseEl.addEventListener('click', handlePauseClick);
+stopEl.addEventListener('click', handleStopClick);
+resetBtn.addEventListener("click", resetCounter); 
 
 
 hungryBtn.addEventListener('click', () =>{
@@ -103,4 +159,31 @@ InputEvent.vaule = paraseInt(input.vaule) > 100;
 
 restBtn.addEventListener("click", resetCounter); 
 
-}
+let count = 0;
+let myCounter = null;
+// console.log(typeof(myCounter));
+  
+function handleStartClick() {
+  // console.log("start button clicked!");
+  myCounter = setInterval(function(){
+    count++;
+    countEl.innerText = "Count: " + count;
+  }, 1000);
+};
+
+function handleJumpClick() {
+  // console.log("pause button clicked!");
+  clearInterval(myCounter);
+};
+
+function handleStopClick() {
+  // console.log("stop button clicked!");
+  clearInterval(myCounter);
+  count = 0;
+  // console.log(count);
+  countEl.innerText = "Count: " + count;
+};
+
+startEl.addEventListener('click', handleStartClick);
+pauseEl.addEventListener('click', handleJumpClick);
+stopEl.addEventListener('click', handleStopClick);
