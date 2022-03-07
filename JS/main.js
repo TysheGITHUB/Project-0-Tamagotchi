@@ -10,37 +10,33 @@ const bathroomEl = document.getElementById("count-bathroom");
 
 function hungryClick() {
   // console.log("hungry button clicked!");
-  myTimer = setInterval(function(){
-    count ++ ;
-    countEl.innerText = "Count: " + count ;
- 1000;
-})
+if (count <=10) {
+    count--
+    hungryEl.innerText = "Count: " + count;
 }  
+}
 function soicalizeClick() {
     if (count >=10){
         count--
-    socializeEl.innerText = count;
+    socializeEl.innerText = "Count: " + count;
     }
-  // console.log("pause button clicked!");
+  // console.log("soicalize button clicked!");
   clearInterval(myCounter);
 };
 function sleepClick() {
     if(count >=10) {
         count--
-        socializeEl.innerText = count;
+        sleepEl.innerText = "Count: " + count;
     }
-  // console.log("stop button clicked!");
-  clearInterval(myCounter);
-  count = 0;
-  // console.log(count);
-  countEl.innerText = `Count: ${stopp}`;
-};
+}
+  // console.log("sleep, button clicked!");
+  
 function bathroomClick() {
     // console.log("stop button clicked!");
     clearInterval(myCounter);
     count = 0;
     // console.log(count);
-    countEl.innerText = `Count: " ${stopp}`;
+    countEl.innerText = `bathroom: " ${stopp}`;
 }
 function resetCounter(){ 
     clearInterval(interval); 
@@ -54,12 +50,6 @@ function stopClicks(){
     }
 }
 
-const stopTimer = () => {
-    // clearInterval(setSeconds(0))
-    // document.querySelector('#counter').remove()
-}
-
-
 const startEl = document.getElementById("btn-start");
 // const pauseEl = document.getElementById("btn-pause");
 const stopEl = document.getElementById("btn-stop-count");
@@ -71,40 +61,25 @@ let myCounter = null;
 let reset = ""
 let stop = 0;
 // console.log(typeof(myCounter));
-
-
-// const stopTimer = () => {
-//     clearInterval(setSeconds(0))
-//     document.querySelector('#counter').remove()
-// }
-// restBtn.addEventListener("click", resetCounter); 
-
   
 function handleStartClick() {
   // console.log("start button clicked!");
   myCounter = setInterval(function(){
+      handleStopClick()
     count++;
-    countEl.innerText = "Count: " + count;
-    petBathroom()
+    socializeEl.innerText = "socialize: " + count;
+    sleepEl.innerText = "sleep: " + count;
+    bathroomEl.innerText = "bathroom: " + count;
+    hungryEl.innerText = "hungry: " + count;
   }, 1000);
 };
 
-// function handlePauseClick() {
-//   // console.log("pause button clicked!");
-//   clearInterval(myCounter);
-// };
-
 function handleStopClick() {
-  // console.log("stop button clicked!");
-  clearInterval(myCounter);
-  count = 0;
-  // console.log(count);
-  countEl.innerText = "Count: " + count;
-
+    if (count >= 9){
+        clearInterval(myCounter)
+  // console.log(counter);
+}
 }
 
 startEl.addEventListener('click', handleStartClick);
-// pauseEl.addEventListener('click', handlePauseClick);
-// stopEl.addEventListener('click', stopClick);
-stopEl.addEventListener('click', handleStopClick); 
-// 
+// stopEl.addEventListener('click', handleStopClick);
