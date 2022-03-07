@@ -1,66 +1,62 @@
 let Hungry = 10;
-let Socialize = 6;
-let Sleep = 2;
-let Bathroom = 5;
+let Socialize = 10;
+let Sleep = 10;
+let Bathroom = 10;
 
-class Pet {
-    constructor ( hungry, socialize, sleep, bathroom ) {
-        this.hungry = hungry;
-        this.socialize = socialize;
-        this.sleep= sleep;
-        this.bathroom = bathroom;
+const hungryEl = document.getElementById("count-hungry");
+const socializeEl = document.getElementById("count-socialize");
+const sleepEl = document.getElementById("count-sleep");
+const bathroomEl = document.getElementById("count-bathroom");
+
+function hungryClick() {
+  // console.log("hungry button clicked!");
+  myTimer = setInterval(function(){
+    count ++ ;
+    countEl.innerText = "Count: " + count ;
+ 1000;
+})
+}  
+function soicalizeClick() {
+    if (count >=10){
+        count--
+    socializeEl.innerText = count;
     }
+  // console.log("pause button clicked!");
+  clearInterval(myCounter);
 };
-
-petHungry = function () {
-    if ( startHungry % 10 === 0){
-        this.hungry++;
+function sleepClick() {
+    if(count >=10) {
+        count--
+        socializeEl.innerText = count;
     }
-    $('hungry-num').text(`Hungry: ${this.hungry}`);
+  // console.log("stop button clicked!");
+  clearInterval(myCounter);
+  count = 0;
+  // console.log(count);
+  countEl.innerText = `Count: ${stopp}`;
+};
+function bathroomClick() {
+    // console.log("stop button clicked!");
+    clearInterval(myCounter);
+    count = 0;
+    // console.log(count);
+    countEl.innerText = `Count: " ${stopp}`;
 }
-decreseHungry = function () {
-    if (this.hungry > 0) {
-        return this.hungry -= 1;
-    }
-}
-petSocialize = function () {
-    if ( startSocialize % 6 === 0) {
-        this.socialize++;
-    }
-    $('.socialize-num').text(`Socialize: ${this.socialize}`);
+function resetCounter(){ 
+    clearInterval(interval); 
+    i = 0; 
+    counter.innerHTML = i; 
 }
 
-decreaseSoicailize = function() {
-    if (this.socialize > 0) {
-        return this.bored -= 1;
-    }
-}
-petSleep = function () {
-    if(this.sleep > 2){
-        this.sleep--;
-    }
-    $('.sleep-num').text(`Sleep: ${this.sleep}`);
- }
-
- decreaseSleep = function () {
-     if(cound >1) {
-         count--
-         decreaseSleep.innerText- ("this.sleep" + count)
-
-     }
- }
-
-petBathroom = function () {
-    if(this.bathroom > 5) {
-        return this.bathroom -= 1;
+function stopClicks(){
+    if(num >= 10) {
+        clearInterval(myClicks)
     }
 }
 
-bathroomCount = function () {
-    if(this.bathroom > 5) {
-        return this.bathroom -= 1;
-    }
-    $('.bathroom-num').text(`Bathroom: ${this.bathroom}`);
+const stopTimer = () => {
+    // clearInterval(setSeconds(0))
+    // document.querySelector('#counter').remove()
 }
 
 
@@ -89,6 +85,7 @@ function handleStartClick() {
   myCounter = setInterval(function(){
     count++;
     countEl.innerText = "Count: " + count;
+    petBathroom()
   }, 1000);
 };
 
