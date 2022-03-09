@@ -10,53 +10,42 @@
    
     </style>
 </head>
-
 <body>
-
 <h1>Life With Memetchi - My Tamagotchi</h1>
 
-
-<h3 id="pet-name">Hey there, Welcome in! My Name Is Memetchi!</h3>
+<h2 id="pet-name">Hey there, Welcome in! My Name Is Memetchi!</h2>
 <h3 id="pet-age"> I'm 8 Years-Old & This is My Tamagotchi</h3>
-
+<div id="game-screen">
+    <button id="start" class="control">Start</button>
+    <div id="Memetchi-name">
+        <p>Name:</p>
+    </div>
+</div>
 <a href="https://github.com/TysheGITHUB/Project-0-Tamagotchi"></a>
 
 <div id="petimage"></div>
 <img src="https://www.kindpng.com/picc/m/337-3373663_tamagotchi-friends-mametchi-clipart-png-download-mametchi-tamagotchi.png" alt="Memetchi" width="300" height=300/> 
 
-<div class="container"</div>
+<div class="status">
    
-    <button id="btn-start">Start</button>
-     <!-- <button id="btn-pause">Pause</button> -->
+    <p id="hungry">Hungry:0</p>
+    <p id="socialize">Soicalize:0</p>
+    <p id="sleep">Sleep:0</p>
+    <p id="bathroom">Bathroom:0</p>
 
-    <p id="count-hungry">Hungry:0</p>
+<div id="control-buttons">
+    <button id="start">Start</button>
     <button id="btn-hungry">Hungry</button>
-
-    <p id="count-socialize">Soicalize:0</p>
-     <button id="btn-Socialize">Soicalize</button>
-
-     <p id="count-sleep">Sleep:0</p>
+    <button id="btn-Socialize">Soicalize</button>
     <button id="btn-sleep">Sleep</button>
-
-    <p id="count-bathroom">Bathroom:0</p>
     <button id="btn-bathroom">Bathroom</button>
 
+</div>
 
     <p id= "para"></p>
-    
+
     <script>
-    document.getElementById("para").onclick = function() {  
-        hungryEl()
-    }
-        document.getElementById("para").onclick = function() {  
-        socializeEl()
-        }
-        document.getElementById("para").onclick = function() {  
-       sleepEl()
-        }
-       document.getElementById("para").onclick = function() {  
-       bathroomEl()
-       }
+
 
     </script>
    
