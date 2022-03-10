@@ -24,7 +24,7 @@ class Tamagotchi {
 const hungerEl = document.getElementById('#btn-hunger')
 const sleepinessEl = document.getElementById('#btn-sleepiness')
 const bordemEl = document.getElementById('#btn-bordem')
-const lightsEl = document.getElementById("btn-lights")
+const colorButton = document.getElementById(".myClassLights");
 const petSurvived = document.getElementById("petSurvived")
 
 hungerCount();
@@ -35,54 +35,25 @@ ageCount();
 let hunger = 1
 let hungerCounter = null;
 
-() {
-    tamagotchiName : "",
-    setName() {
-        this.tamagotchiName = prompt (`what is your pet name?, Enter Name`)
-        const nameDiv = document.querySelector(`#tama-name p `) 
-        // console.log(nameDiv)
-        nameDiv.innerTEXT = (` Name: ${this.tamagotchiName}`)
-    },
+function hungerCount() {
+    hungerCounter = setInterval(function(){
+        hunger++;
+        hunger.innerText = "hunger" + hunger;
+        if (hunger === 10)
+        petSurvived.innerText = "Your pet went to Heaven :')";
+        if(hunger == 10 || bordem == 10 || sleepiness == 10)
+        clearInterval(hungerCounter);
+        }, 1000);
+    }
+   // click functions + event listener to pass the functions
 
-    startGame() { 
-        this.setName()
-        this.tamagotchi = new Tamagotchi(this.tamagotchiiName)
-        console.log(this.tamagotchi) 
-    },
+   hungerEl.addEventListener("click", hungerClick)
+   colorButton.addEventListener("click", colorChange);
+
+    // startGame() { 
+    //     this.setName()
+    //     this.tamagotchi = new Tamagotchi(this.tamagotchiiName)
+    //     console.log(this.tamagotchi) 
+    // },
 
 // Event Listeners 
-button.addEventListener("click", (event) => {
-})
-
-hungryButton.addEventListener("click", (event) => {
-tamaGame.tamagotchi.hungryPet()
-document.getElementById()
-console.log(tamaGame.Tamagotchi)
- })
-
-sleepButton.addEventListener("click", (event) => {
-tamaGame.tamagotchi.sleepPet() 
-document.getElementById()
-console.log(tamaGame.Tamagotchi)
- });
-
-socializeButton.addEventListener("click", (event) => {
-tamaGame.tamagotchi.socializePet()
-document.getElementById()
-console.log(tamaGame.Tamagotchi)
- });
-
-bathroomButton.addEventListener("click", (event) => {
-tamaGame.tamagotchi.bathroomPet()
-document.getElementById()
-console.log(tamaGame.Tamagotchi)
-   })
-startGame() 
-    this,setName( {
-        this.tamagotchi = new Tamagotchi(this.tamagotchiName)
-        console.log(this.Tamagotchi)
-    })
-aging() 
-    const intervalID = setInterval (() => {
-        console.log("aging pet")
-    })
