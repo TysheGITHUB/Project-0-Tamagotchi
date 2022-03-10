@@ -1,31 +1,41 @@
 console.log("tamagotchi")
 class Tamagotchi {
-    constructor(start, hungry,socialize,sleep,barthroom){
+    constructor(name, age,hunger,sleep,bordem){
         // this.start= this.start
         this.name = this.name
         this.age = 0;
-        this.hungry = 1
-        this.sleep = this.sleep
-        this.bathroom = this.bored
+        this.hunger = 1
+        this.sleepiness = this.sleep
+        this.bordem = this.bored
     }
-    
-    hungryPet(){
+
+    hungerPet(){
         this.hungry--
     }
-    sleepPet(){
+    sleepinesPet(){
         this.sleep = this.sleep -4
     }
-    socializePet(){
+    bordemPet(){
         this.socialize-- 
     }
 }
 //button selector 
 // const startButton = document.querySelector('#start')
-const hungryButton = document.querySelector('#hungry')
-const sleepButton = document.querySelector('#sleep')
-const bathroomButton = document.querySelector('#bathroom')
+const hungerEl = document.getElementById('#btn-hunger')
+const sleepinessEl = document.getElementById('#btn-sleepiness')
+const bordemEl = document.getElementById('#btn-bordem')
+const lightsEl = document.getElementById("btn-lights")
+const petSurvived = document.getElementById("petSurvived")
 
-const tamaGame = {
+hungerCount();
+sleepinessCount();
+bordemCount();
+ageCount();
+
+let hunger = 1
+let hungerCounter = null;
+
+() {
     tamagotchiName : "",
     setName() {
         this.tamagotchiName = prompt (`what is your pet name?, Enter Name`)
@@ -40,7 +50,7 @@ const tamaGame = {
         console.log(this.tamagotchi) 
     },
 
-// event listener 
+// Event Listeners 
 button.addEventListener("click", (event) => {
 })
 
