@@ -3,24 +3,21 @@ h1 {
     font-family:'Times New Roman', Times, serif ;
     font-size: 40px;
     color: rgb(201, 190, 177);
+    flex-direction: row;
 
 } body {
     text-align: center;
     margin: 250px; 
-    background-image:url(https://cutewallpaper.org/21/8-bit-gif-background/8-Bit-Day-Gif-Hd-Wallpapers-backgrounds-Download-.gif) ; 
-    background-repeat: nrepeat;
-    background-size: 100%;
+    background-image:url(https://64.media.tumblr.com/9c290079f03561e9e6d1f27a9e1adb94/tumblr_or6nwehp7T1wq3wtao1_400.gifv) ; 
+    background-repeat: repeat;
+    background-size: 550%;
     height: 200px;
     font-size: 20px;
-}
-
-.controls {
-
-} #control-buttons {
-    text-align: center;
+    flex-direction: row;
 
 }  .flex-container {
     display: flex;
     height: 200px ;
     justify-content: center;
-  }
+    
+}

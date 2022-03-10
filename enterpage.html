@@ -2,35 +2,50 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JS/apps.js"defer></script>
     <link rel ="stylesheet" href="css/style.css">
-   </style>
+    <title>TAMAGOTCHI</title>
+   
+    </style>
 </head>
+
 <body>
-    <div id="tamagotchi-screen">
-        <img id="Memetchi-pic" src="https://www.kindpng.com/picc/m/337-3373663_tamagotchi-friends-mametchi-clipart-png-download-mametchi-tamagotchi.png" alt="tamagotchi" width="300" height=300/> 
 
-        <button id="start" class="control">Start</button>
-        </div>
-        <script src = "JS/main.js" defer></script>
 <h1>Life With Memetchi - My Tamagotchi</h1>
-    <div id ="tama-name"></div>
-    <p>Name:</p>
-</div>
-<div class="status">
-    <p id="hungry">Hungry:0</p>
-    <p id="socialize">Soicalize:0</p>
-    <p id="sleep">Sleep:0</p>
-    <p id="bathroom">Bathroom:0</p>
-</div>
-<img src="" alt="memetchi" width="200" height="200">
-   </div>
-   <div id="control-buttons">
+<h2></h2>
 
-    <button id="btn-hungry" class ="contols" >Hungry</button>
-    <button id="btn-Socialize" class ="contols" >Soicalize</button>
-    <button id="btn-sleep" class ="contols" >Sleep</button>
-    <button id="btn-bathroom" class ="contols" >Bathroom</button>
+<h3 id="pet-name">Hey there, Welcome in! My Name Is Memetchi!</h3>
+<h3 id="pet-age"> I'm 8 Years-Old & This is My Tamagotchi</h3>
+
+<div id="petimage"></div>
+<img src="https://www.kindpng.com/picc/m/337-3373663_tamagotchi-friends-mametchi-clipart-png-download-mametchi-tamagotchi.png" alt="Memetchi" width="300" height=300/> 
+   
+
+<div class="container">
+    <p id="count"></p>
+   
+    <button id="btn-start">Start</button>
+     <!-- <button id="btn-pause">Pause</button> -->
+
+    <p id="count-hungry">Hungry:0</p>
+    <button id="btn-hungry">Hungry</button>
+
+    <p id="count-socialize">Soicalize:0</p>
+     <button id="btn-Socialize">Soicalize</button>
+
+     <p id="count-sleep">Sleep:0</p>
+    <button id="btn-sleep">Sleep</button>
+
+    <p id="count-bathroom">Bathroom:0</p>
+    <button id="btn-bathroom">Bathroom</button>
+
+    <p id= "count-age">Age:0</p>
+    <button id="btn-age">Age</button>
+
+    <button id="btn-stop-count">Stop</button>
+  
 </div>
 </body>
 </html>
