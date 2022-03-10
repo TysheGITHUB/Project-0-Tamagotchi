@@ -1,13 +1,14 @@
 console.log("tamagotchi")
 class Tamagotchi {
     constructor(start, hungry,socialize,sleep,barthroom){
-        this.start= this.start
+        // this.start= this.start
         this.name = this.name
-        this.hungry = this.hungry
-        this.socialize = this.socialize
+        this.age = 0;
+        this.hungry = 1
         this.sleep = this.sleep
-        this.bathroom = this.bathroom
+        this.bathroom = this.bored
     }
+    
     hungryPet(){
         this.hungry--
     }
@@ -19,9 +20,8 @@ class Tamagotchi {
     }
 }
 //button selector 
-const startButton = document.querySelector('#start')
+// const startButton = document.querySelector('#start')
 const hungryButton = document.querySelector('#hungry')
-const socializeButton = document.querySelector('#socialize')
 const sleepButton = document.querySelector('#sleep')
 const bathroomButton = document.querySelector('#bathroom')
 
