@@ -43,7 +43,7 @@ const ageCounter = document.getElementById("age")
 const hungerCounter = document.getElementById("hungry")
 const sleepCounter = document.getElementById("sleep")
 const boredCounter = document.getElementById("bored")
-const myPetSurvived = document.getElementById("petSurvived")
+const myPetHeaven = document.getElementById("petHeaven")
 
 let number = 0
 let food = 0
@@ -72,61 +72,65 @@ function handleStartClick() {
     bordemCount();
     ageCount();
 };
-// hunger increment +1
+// hunger count increment +1
 function hungerCount() {
-    hungerCounter = setInterval(function(){
-        hunger++;
-        hunger.innerText = "hunger" + hunger;
-        if (hunger === 10)
-        petSurvived.innerText = "Your pet went to Heaven :')";
-        else (hunger === 10 || bordem === 10 || sleepiness === 10 || age === 10)
-        clearInterval(hungerCounter);
-        myPetSurvived.innerText = " my pet survived!"
-        
-        }, 1000);
-    }d
-
-    function ageCount() {
-        ageCounter = setInterval(function(){
-            number++;
-            ageCounter.innerText ="Age:" + number
-            if( age === 10){
-                clearInterval(ageCounter)
-                petSurvived.innerText = "your pet went to Heaven :')"
-            }
-        }, 2000);
+    hungryCounter = setInterval(function(){
+    food++; 
+     if (hunger === 10) {
+        clearInterval(hungryCounter)
+        myPetHeaven.innerText= "pet has reached pet heaven"
+     }
+     
+         })
     }
+    //  myPetHeaven.innerText = "Your pet went to Heaven :')";
 
-    function sleepinessCount () {
-        sleepCounter = setInterval(function(){
-            sleep++;
-            sleepCounter.innerText = "sleep" + tired;
-            if( tired === 10){
-                clearInterval(sleepCounter)
-                petSurvived.innerText = "your pet went to Heaven :')"
+    // else (hunger === 10 || bordem === 10 || sleepiness === 10 || age === 10) // all count reached 10 - pet has went to heaven.
+    //     clearInterval(hungerCounter); // clear hunger count
+    //      myPetHeaven.innerText = " pet heaven, she's gone."
+    //      }, 1000);
+    
+
+// age count increment +1
+        function ageCount() {
+        theAgeCounter = setInterval(function(){
+        number++;
+        ageCounter.innerText ="Age:" + number
+    if( age === 10){ // age count reached 10
+        clearInterval(theAgeCounter)
+        myPetHeaven.innerText = "your pet went to Heaven :')"
+        }
+        }, 2000); // 2 sec
+    }
+    // sleepines count
+        function sleepinessCount() {
+        tiredCounter = setInterval(function(){
+        sleep++; //  sleep increment +1
+        sleepCounter.innerText = "sleep" + tired;
+    if( tired === 10){ // sleepiness has reached 10
+        clearInterval(tiredCounter)
+        petSurvived.innerText = "your pet went to Heaven :')"
             }
-        }, 3000);
+        }, 3000); // 3 seconds
     } 
-
+    // bordem count increment +1
     function bordemCount(){
-        borderCounter = setInterval(function(){
-            bored++;
-            boredCounter.innerText = " bored" + bored;
-            if(bored === 10){
-                clearInterval(hungerCounter)
-                clearInterval(sleepCounter)
-                clearInterval(boredCounter)
-                clearInterval(ageCounter)
-                myPetSurvived.innerText = "your pet went to Heaven :')"
-            } 2500
-    })
+        theBoredCounter = setInterval(function(){
+        bored++;
+        boredCounter.innerText = " bored" + bored;
+    if(bored === 10){ // hunger count reached 10
+        clearInterval(hungryCounter)
+        clearInterval(tiredCounter)
+        clearInterval(theBoredCounter)
+        clearInterval(theAgeCounter) // clear counter for each . 
+    myPetSurvived.innerText = "your pet went to Heaven :')" }
+        },2500)
+     }
     // increments 4 bordem
 
     function bordemClick(){
-        borderCounter = setInterval(function(){
-            tired++;
-            boredCounter.innerText = "bored" + bordem;
-        }, 2500) 
+            tired--;
+            boredemCounter.innerText = "bored" + bordem;
     };
         // increments for hunger 
     function hungerClick(){
@@ -146,14 +150,14 @@ function hungerCount() {
         clearInterval(hungerCount);
         clearInterval(sleepinessCount);
     }
-    }
     
-   // click functions + event listener to pass the functions / start click's
+   // click functions  event listener  pass the functions / start click's
 
    startEl.addEventListener('click', handleStartClick)
-   hungerEl.addEventListener("click", hungerStartClick)
-   sleepinessEl.addEventListener("click", tiredStartClick )
-   bordemEl.addEventListener("click", bordemStartClick )
+
+   hungerEl.addEventListener("click", hungerClick)
+   sleepinessEl.addEventListener("click", tiredClick )
+   bordemEl.addEventListener("click", bordemClick )
 
 //    colorButton.addEventListener("click", colorChange);
 

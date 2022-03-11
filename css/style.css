@@ -8,7 +8,7 @@ h1 {
 } body {
     text-align: center;
     margin: 250px; 
-    background-image:url() ; 
+    background-color: yellow; 
     background-repeat: repeat;
     background-size: 550%;
     height: 200px;
