@@ -24,16 +24,31 @@ class Tamagotchi {
 const hungerEl = document.getElementById('#btn-hunger')
 const sleepinessEl = document.getElementById('#btn-sleepiness')
 const bordemEl = document.getElementById('#btn-bordem')
+
 const colorButton = document.getElementById(".myClassLights");
 const petSurvived = document.getElementById("petSurvived")
+
+const ageCounter = document.getElementById("age")
+const hungerCounter = document.getElementById("hungry")
+const sleepCounter = document.getElementById("sleep")
+const boredCounter = document.getElementById("bored")
 
 hungerCount();
 sleepinessCount();
 bordemCount();
 ageCount();
 
-let hunger = 1
+let num = 0
+let hunger = 0
+let sleep = 0 
+let bored = 0
+
+let ageCounter = null;
 let hungerCounter = null;
+let sleepCounter = null;
+let boredCounter = nul; 
+
+
 
 function hungerCount() {
     hungerCounter = setInterval(function(){
